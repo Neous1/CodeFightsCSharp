@@ -39,17 +39,14 @@ namespace FirstDuplicate
 /// 
 ///        
             
+            var myDict = new Dictionary<int, int>();
 
             for (int i = 0; i < a.Length; i++)
             {
-                Console.WriteLine("HI");
+                myDict.Add(i, a[i]);
+                //Console.WriteLine("HI");
             }
             
-            
-
-            
-
-
 
             Console.ReadLine();
 
