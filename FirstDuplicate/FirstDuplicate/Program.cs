@@ -46,7 +46,15 @@ namespace FirstDuplicate
                 myDict.Add(i, a[i]);
                 //Console.WriteLine("HI");
             }
-            
+
+            foreach (var item in myDict)
+            {
+                if (myDict.Values)
+                {
+                    
+                }
+                Console.WriteLine(item);
+            }
 
             Console.ReadLine();
 
