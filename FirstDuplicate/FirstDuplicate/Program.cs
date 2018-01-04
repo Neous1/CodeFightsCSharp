@@ -11,34 +11,30 @@ namespace FirstDuplicate
         static void Main(string[] args)
         {
 
+          int [] a = { 2,3,3,1,5,2};
 
-            int holder;
-            int [] a = { 2,3,3,1,5,2};
-            
+
+
+
+
+            //Console.ReadLine();
+
+        }
+
+        public static int thefirstDuplicate(int[] a)
+        {
             var myDict = new Dictionary<int, int>();
 
             for (int i = 0; i < a.Length; i++)
             {
-                myDict.Add(i, a[i]);
-                //Console.WriteLine("HI");
-            }
-
-            foreach (var item in myDict)
-            {
-                
-               // Console.WriteLine(item);
-                if (myDict.ContainsValue(item.Value))
+                if (myDict.ContainsKey(a[i]))
+                    return a[i];
+                else
                 {
-                    holder = item.Value;
-                    Console.WriteLine(holder);
-                    //Console.WriteLine("{0} {1}", item.Key, item.Value);
-                   
+                    myDict.Add(a[i], 1);
                 }
-                
             }
-
-            Console.ReadLine();
-
+            return -1;
         }
     }
 }
