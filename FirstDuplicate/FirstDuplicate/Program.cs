@@ -25,10 +25,11 @@ namespace FirstDuplicate
 
             foreach (var item in myDict)
             {
-                holder = item.Value;
+                
                // Console.WriteLine(item);
-                if (myDict.ContainsValue(holder))
+                if (myDict.ContainsValue(item.Value))
                 {
+                    holder = item.Value;
                     Console.WriteLine(holder);
                     //Console.WriteLine("{0} {1}", item.Key, item.Value);
                    
