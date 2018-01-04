@@ -10,9 +10,9 @@ namespace FirstDuplicate
     {
         static void Main(string[] args)
         {
-            
 
 
+            int holder;
             int [] a = { 2,3,3,1,5,2};
             
             var myDict = new Dictionary<int, int>();
@@ -25,11 +25,13 @@ namespace FirstDuplicate
 
             foreach (var item in myDict)
             {
-                Console.WriteLine(item);
-                if (myDict.ContainsValue(item.Value))
+                holder = item.Value;
+               // Console.WriteLine(item);
+                if (myDict.ContainsValue(holder))
                 {
-                    Console.WriteLine(item.Value);
-                    break;
+                    Console.WriteLine(holder);
+                    //Console.WriteLine("{0} {1}", item.Key, item.Value);
+                   
                 }
                 
             }
