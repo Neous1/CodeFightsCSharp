@@ -11,11 +11,9 @@ namespace FirstDuplicate
         static void Main(string[] args)
         {
 
-          int [] a = { 2,3,3,1,5,2};
-
-
-
-
+          int [] a = { 2,2,3,3,1,5,2};
+            Console.WriteLine(thefirstDuplicate(a)+"\n");
+            
 
             //Console.ReadLine();
 
