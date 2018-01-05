@@ -10,10 +10,11 @@ namespace firstNoRepeatingChar
     {
         static void Main(string[] args)
         {
-            string s = "abacabad";
+            var s = "abacabad";
+            Console.WriteLine("Non repeating chararacter is: ", FirstNotRepeatingChar(s));
         }
         
-        public static char firstNotRepeatingChar(string s)
+        public static char FirstNotRepeatingChar(string s)
         {
             var myList = new Dictionary<char, int>();
 
@@ -24,6 +25,13 @@ namespace firstNoRepeatingChar
                 else
                     myList[item]++;
             }
+
+            foreach (var i in myList)
+            {
+                if (i.Value == 1)
+                    return i.Key;
+            }
+            return '_';
         }
     }
 }
