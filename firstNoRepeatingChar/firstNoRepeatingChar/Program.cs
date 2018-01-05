@@ -13,11 +13,17 @@ namespace firstNoRepeatingChar
             string s = "abacabad";
         }
         
-        public static char firstNotRepeatingChar()
+        public static char firstNotRepeatingChar(string s)
         {
-            var char = new Dictionary<char, int>();
+            var myList = new Dictionary<char, int>();
 
-
+            foreach (var item in s)
+            {
+                if (!myList.ContainsKey(item))
+                    myList[item] = 1;
+                else
+                    myList[item]++;
+            }
         }
     }
 }
